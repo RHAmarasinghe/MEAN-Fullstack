@@ -1,0 +1,95 @@
+<div *ngIf="viewMode; else editable">
+    <div *ngIf="currentBlog.id">
+      <h4>Blog</h4>
+      <div>
+        <label><strong>Title:</strong></label> {{ currentBlog.title }}
+      </div>
+      <div>
+        <label><strong>Description:</strong></label>
+        {{ currentBlog.description }}
+      </div>
+      <div>
+        <label><strong>Status:</strong></label>
+        {{ currentBlog.published ? "Published" : "Pending" }}
+      </div>
+  
+      <a
+        class="m-3 btn btn-sm btn-danger" style="background-color:darkmagenta; border: 0ch;"
+        routerLink="/blogs/{{ currentBlog.id }}"
+      >
+        Edit
+      </a>
+    </div>
+  
+    <div *ngIf="!currentBlog">
+      <br />
+      <p>Please click on a Blog...</p>
+    </div>
+  </div>
+  
+  <ng-template #editable>
+    <div *ngIf="currentBlog.id" class="edit-form">
+      <h4>Blog</h4>
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            [(ngModel)]="currentBlog.title"
+            name="title"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="description"
+            [(ngModel)]="currentBlog.description"
+            name="description">
+          </textarea>
+        </div>
+  
+        <div class="form-group">
+          <label><strong>Status:</strong></label>
+          {{ currentBlog.published ? "Published" : "Pending" }}
+        </div>
+      </form>
+  
+      <button
+        class="badge badge-primary mr-2"
+        *ngIf="currentBlog.published"
+        (click)="updatePublished(false)"
+      >
+        UnPublish
+      </button>
+      <button
+        *ngIf="!currentBlog.published"
+        class="m-3 btn btn-sm btn-danger" style="background-color:cadetblue; border: 0ch;"
+        (click)="updatePublished(true)"
+      >
+        Publish
+      </button>
+  
+      <button class="m-3 btn btn-sm btn-danger" style="background-color:crimson; border: 0ch;"
+      (click)="deleteBlog()">
+        Delete
+      </button>
+  
+      <button
+        type="submit"
+        class="m-3 btn btn-sm btn-danger" style="background-color:limegreen; border: 0ch;"
+        (click)="updateBlog()"
+      >
+        Update
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentBlog.id">
+      <br />
+      <p>Cannot access this Blog...</p>
+    </div>
+  </ng-template>
