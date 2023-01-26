@@ -19,6 +19,8 @@ import { MainBlogsListComponent } from './components/main-blogs-list/main-blogs-
 import { ViewBlogComponent } from './components/view-blog/view-blog.component';
 
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { ChatComponent } from './chat/chat.component';
+import { ChatService } from './_services/chat.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
     BlogDetailsComponent,
     BlogsListComponent,
     MainBlogsListComponent,
-    ViewBlogComponent
+    ViewBlogComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
     FormsModule,
     HttpClientModule
   ],
-  providers: [httpInterceptorProviders],
+  providers: [httpInterceptorProviders,ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

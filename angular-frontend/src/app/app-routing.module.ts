@@ -14,6 +14,8 @@ import { AddBlogComponent } from './components/add-blog/add-blog.component';
 import { MainBlogsListComponent } from './components/main-blogs-list/main-blogs-list.component';
 import { ViewBlogComponent } from './components/view-blog/view-blog.component';
 
+import { ChatComponent } from './chat/chat.component';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -27,8 +29,9 @@ const routes: Routes = [
   { path: 'blogs/:id', component: BlogDetailsComponent },
   { path: 'add', component: AddBlogComponent },
   { path: 'mainblogs', component: MainBlogsListComponent },
-  { path: 'viewblog/:id', component: ViewBlogComponent }
+  { path: 'viewblog/:id', component: ViewBlogComponent },
 
+  { path: 'chat', component: ChatComponent }
 ];
 
 @NgModule({

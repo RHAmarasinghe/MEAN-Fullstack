@@ -4,6 +4,21 @@ const cookieSession = require("cookie-session");
 
 const app = express();
 
+const http = require('http').createServer(app);
+
+const io = require('socket.io')(http, {
+  cors: {
+    origins: ['http://localhost:8081']
+  }
+});
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+});
+
 var corsOptions = {
   origin: "http://localhost:8081",
   credentials: true
@@ -53,7 +68,8 @@ require('./app/routes/user.routes')(app);
 require("./app/routes/blog.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+
+http.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
