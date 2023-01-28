@@ -1,1 +1,107 @@
-<p>chat works!</p>
+<!-- <p>chat works!  {{username}}</p>
+
+<div *ngFor="let message of messageList">
+    <ul>
+        {{message}}
+    </ul>
+</div>
+
+<input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+<button (click)="sendMessage()">Send Message</button> -->
+
+<!-- <div *ngFor="let message of messageList">
+    <ul id="chat">
+        <li class="you">
+            <div class="entete">
+                <span class="status green"></span>
+                <h2>Vincent</h2>
+                <h3>10:12AM, Today</h3>
+            </div>
+            <div class="message">
+                {{message}}
+            </div>
+        </li>
+    </ul>
+</div>
+    <footer>
+        <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+        <button (click)="sendMessage()">Send Message</button>
+    </footer> -->
+
+
+
+
+    <header>
+        <div>
+            <h2>Connect with travel buddies</h2>
+        </div>
+    </header>
+    <div >
+        <div id="chat" *ngFor="let message of messageList" >
+            <!-- <div *ngIf="message.includes'{{username}}'"> <h2>{{username}}</h2> </div> -->
+            <!-- <div *ngIf="me; else elseBlock"> -->
+                <!-- <div [ngClass]="[me ? 'me' : 'you']" > -->
+                <div class="you">
+                    <!-- <div class="entete">
+                        <h3>10:12AM, Today</h3>
+                        <h2>Vincent</h2>
+                        <span class="status blue"></span>
+                    </div> -->
+                    <div class="message">
+                        {{message}}
+                    </div>
+                </div> 
+            <!-- </div> -->
+
+            <!-- <ng-template #elseBlock>
+                <li class="you" >
+                    <div class="entete">
+                        <span class="status green"></span>
+                        <h2>{{username}}</h2>
+                        <h3>10:12AM, Today</h3>
+                    </div>
+                    <div class="message">
+                        {{message}}
+                    </div>
+                </li>
+            </ng-template> -->
+
+            
+        </div>
+    </div>
+
+        <!-- <li class="me">
+            <div class="entete">
+                <h3>10:12AM, Today</h3>
+                <h2>Vincent</h2>
+                <span class="status blue"></span>
+            </div>
+            <div class="message">
+                OK
+            </div>
+        </li> -->
+    <footer>
+        <div class="chat-footer">
+      
+            <div class="row">
+              <div class="col-md-10">
+                <div class="form-group mb-0">
+                  <input type="text"
+                         placeholder="Type a message"
+                         class="form-control"
+                         [(ngModel)]="newMessage"
+                         (keyup)="$event.keyCode === 13 && sendMessage()"
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-2 text-center align-self-center">
+                <button class="btn btn-primary btn-sm px-3"
+                        (click)="sendMessage()">Send
+                </button>
+              </div>
+            </div>
+
+          </div>
+    </footer>
+

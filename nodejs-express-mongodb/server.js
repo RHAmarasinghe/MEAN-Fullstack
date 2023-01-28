@@ -14,9 +14,22 @@ const io = require('socket.io')(http, {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
+  socket.emit('myId', socket.id);
+
+
+  socket.on('message', ({message, username}) => {
+      console.log(username);
+      console.log(message);
+      const sockitID = socket.id;
+      console.log(sockitID);
+      io.emit('message', `${username} :   ${message}`);
+      io.emit('user', username);
+  });
+
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
+
 });
 
 var corsOptions = {
