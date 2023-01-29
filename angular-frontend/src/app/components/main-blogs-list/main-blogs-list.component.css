@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
 .list {
     text-align: left;
     max-width: 750px;
@@ -17,6 +23,15 @@
     margin: 0;
   }
 
+  .example { 
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/4K-Travel-Wallpaper.jpg");
+    height: 60%;
+    /* Create a parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
   .readmore{
     display: flex;
     justify-content: center;
@@ -24,19 +39,39 @@
     margin-top: 10px;
   }
 
+  .search{
+    align-content: center;
+    /* border: 1px solid purple; */
+    max-width: 50%;
+    margin-left: 25%;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .searchcon{
+    /* border: 1px solid rgb(1, 204, 255); */
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(255, 255, 255));
+    padding-top: 140px;
+    align-content: center;
+    height: 100%;
+    padding-bottom: 0%;
+  }
+
   .card-container {
-    border: 1px solid rgb(73, 255, 1);
+    /* border: 1px solid rgb(73, 255, 1); */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 16px;
-    width: 98%;
+    height: fit-content;
+    padding-bottom: 10%;
+    width: 100%;
+    background-color: rgba(223, 206, 206, 0);
+    
 
   }
 
   .card-img {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
     height: 20%;
   }
@@ -44,21 +79,24 @@
   .card {
     all: unset;
     border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
+    /* opacity: 50%; */
+    /* border: 1px solid #eee; */
+    background-color: rgba(255, 255, 255, 0.89);
     height: 100%;
-    width: 41%;
+    width: 28%;
     margin-top : 1.5%;
-    padding: 4%;
+    padding: 1%;
     /* display: flex;
     flex-direction: column; */
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
+    margin-right: 30px;
+    font-family: 'Alice', serif;
   }
 
   .card-container .card:not(:last-child) {
-    margin-right: 0;
+    margin-right: 30px;
   }
 
   .card.card-small {
@@ -72,7 +110,7 @@
 
   .card-container .card:not(.highlight-card):hover {
     /* transform: translateY(-3px); */
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.473);
   }
 
   .card-container .card:not(.highlight-card):hover .material-icons path {
@@ -128,7 +166,7 @@
 
   .together{
     border: 1px solid black;
-    width: 90%;
+    width: 100%;
   }
 
   .edit{
@@ -142,5 +180,15 @@
     max-width: 100%;
     flex-direction: row;
     align-items:flex-start;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+    height: max-content;
+    font-family: 'Righteous', cursive;
+  }
+
+  .headsec{
+    text-align: right;
+    /* border: 1px solid rgb(253, 2, 253); */
+    max-width: 100%;
+    padding-right: 5%;
+    padding-top: 150px;
   }

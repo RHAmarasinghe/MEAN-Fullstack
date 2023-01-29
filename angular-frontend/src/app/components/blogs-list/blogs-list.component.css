@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 .list {
     text-align: left;
     max-width: 750px;
     margin: auto;
+  }
+
+  .search{
+    align-content: center;
+    /* border: 1px solid purple; */
+    margin-left: 28%;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
   h1,
@@ -25,14 +34,24 @@
   }
 
   .card-container {
-    border: 1px solid rgb(73, 255, 1);
+    /* border: 1px solid rgb(73, 255, 1); */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 16px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     width: 98%;
+    background-image: linear-gradient( to top left, rgba(255,0,0,0), rgb(255, 255, 255));
+  }
 
+  .bloglist{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    padding-left:10px; 
+    text-shadow: 0 4px 17px rgba(0, 0, 0, 0.85);
   }
 
   .card-img {
@@ -143,4 +162,11 @@
     flex-direction: row;
     align-items:flex-start;
     border: 1px solid yellow;
+    background-image: url("https://images.pexels.com/photos/13685709/pexels-photo-13685709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 60%;
+    /* Create a parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }

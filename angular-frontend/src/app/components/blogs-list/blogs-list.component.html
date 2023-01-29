@@ -2,26 +2,30 @@
 <div class="together2">
   <div class="together">
     <div class="col-md-8">
-      <h6 style="font-weight: bolder;">Check on your blogs {{username}}</h6>
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search by title"
-          [(ngModel)]="title"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            (click)="searchTitle()"
-          >
-            Search
-          </button>
+      <h6 class="search" style="font-weight: bolder; color: rgb(255, 255, 255);">Check on your blogs {{username}}</h6>
+      
+      <div class="search">
+        <div class="input-group mb-3" >
+          <input style="border-top-left-radius: 25px; border-bottom-left-radius: 25px;"
+            type="text"
+            class="form-control"
+            placeholder="Search by title"
+            [(ngModel)]="title"
+          />
+          <div class="input-group-append">
+            <button style="border-top-right-radius: 25px; border-bottom-right-radius: 25px;"
+              class="btn btn-primary btn-block"
+              (click)="searchTitle()"
+            >
+              Search
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-      <h4>Blogs List</h4>
+
+    </div>
+      <h4 class="bloglist" style="font-weight: bolder; color: rgb(255, 255, 255);">Blogs List</h4>
       <ul class="card-container">
         <li class="card"
           *ngFor="let blog of blogs; let i = index"
@@ -42,9 +46,6 @@
                 <span>Read more</span>
               </div>
             </a>
-
-
-
         </li>
       </ul>
   
