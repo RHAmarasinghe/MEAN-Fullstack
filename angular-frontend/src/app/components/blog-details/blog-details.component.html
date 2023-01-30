@@ -1,8 +1,9 @@
-<div *ngIf="viewMode; else editable">
+
+  <div *ngIf="viewMode; else editable">
     <div *ngIf="currentBlog.id">
-      <h4>Blog</h4>
-      <div>
-        <label><strong>Title:</strong></label> {{ currentBlog.title }}
+      <h4 style="margin-top: 20px; text-align: center;">Blog</h4>
+      <div >
+        <label><strong >Title:</strong></label> {{ currentBlog.title }}
       </div>
       <div>
         <label><strong>Description:</strong></label>
@@ -27,12 +28,14 @@
     </div>
   </div>
   
+
   <ng-template #editable>
+    <div class="together2">
     <div *ngIf="currentBlog.id" class="edit-form">
-      <h4>Blog</h4>
+      <h4 style="color: white;">Blog</h4>
       <form>
         <div class="form-group">
-          <label for="title">Title</label>
+          <label for="title" style="color: white;">Title</label>
           <input
             type="text"
             class="form-control"
@@ -42,8 +45,8 @@
           />
         </div>
         <div class="form-group">
-          <label for="description">Description</label>
-          <textarea
+          <label for="description" style="color: whitesmoke;">Description</label>
+          <textarea  style="height: 250px;"
             type="text"
             class="form-control"
             id="description"
@@ -52,14 +55,14 @@
           </textarea>
         </div>
   
-        <div class="form-group">
+        <div class="form-group" style="color: whitesmoke; text-shadow: 0 20px 37px rgba(0, 0, 0, 1);">
           <label><strong>Status:</strong></label>
           {{ currentBlog.published ? "Published" : "Pending" }}
         </div>
       </form>
   
       <button
-        class="badge badge-primary mr-2"
+        class="m-3 btn btn-sm btn-danger" style="background-color:cadetblue; border: 0ch;"
         *ngIf="currentBlog.published"
         (click)="updatePublished(false)"
       >
@@ -85,11 +88,13 @@
       >
         Update
       </button>
-      <p>{{ message }}</p>
+      <p style="color: whitesmoke;">{{ message }}</p>
     </div>
-  
+  </div>
     <div *ngIf="!currentBlog.id">
       <br />
       <p>Cannot access this Blog...</p>
     </div>
   </ng-template>
+
+

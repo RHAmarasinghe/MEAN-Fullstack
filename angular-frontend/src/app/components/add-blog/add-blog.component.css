@@ -1,5 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+.topname{
+  margin-left: 20%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
 .submit-form {
-    max-width: 700px;
-    margin: auto;
+    width: 60%;
+    margin-left: 20%;
+    height: 850px;
+    
   }
   
+  .together2{
+    max-width: 100%;
+    /* border: 1px solid yellow; */
+    background-image: url("https://images.wallpaperscraft.com/image/single/forest_trees_fog_110131_3840x2400.jpg");
+    /* Create a parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
 .list {
     text-align: left;
@@ -55,7 +56,7 @@
   }
 
   .card-img {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
     height: 20%;
   }
@@ -73,6 +74,8 @@
     flex-direction: column; */
     align-items: center;
     transition: all 0.2s ease-in-out;
+    
+    font-family: 'Alice', serif;
     line-height: 24px;
   }
 
@@ -146,14 +149,21 @@
   }
 
   .together{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 70%;
   }
 
   .edit{
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     width: 40%;
     height: auto;
+    padding-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.79);;
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
   }
 
   .together2{
@@ -161,8 +171,8 @@
     max-width: 100%;
     flex-direction: row;
     align-items:flex-start;
-    border: 1px solid yellow;
-    background-image: url("https://images.pexels.com/photos/13685709/pexels-photo-13685709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    /* border: 1px solid yellow; */
+    background-image: url("https://images.wallpaperscraft.com/image/single/man_alone_mountains_160607_3840x2400.jpg");
     height: 60%;
     /* Create a parallax effect */
     background-attachment: fixed;
