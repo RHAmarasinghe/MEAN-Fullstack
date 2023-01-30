@@ -1,0 +1,14 @@
+.together2{
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    align-items:flex-start;
+    /* border: 1px solid yellow; */
+    background-image: url("https://images.wallpaperscraft.com/image/single/man_alone_mountains_160607_3840x2400.jpg");
+    height: 568px;
+    /* Create a parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
