@@ -7,7 +7,6 @@ beforeAll(() => jest.setTimeout(90 * 1000));
     test("It should give status 200", async () => {
       const response = await request(app).get("/api/blogs");
       expect(response.statusCode).toBe(200);
-    // expect(2+2).toBe(5);
     }, 90000);
   });
 
@@ -63,21 +62,21 @@ beforeAll(() => jest.setTimeout(90 * 1000));
     }, 30000);
   });
 
-  // describe("Test login by corect user ", () => {
-  //   test("It should give status 200", async () => {
-  //     const response = await request(app).post("/api/auth/signin").send({
-  //         username: "Niki",
-  //         password: "12345690"
-  //     });
-  //     expect(response.statusCode).toBe(200);
-  //   }, 30000);
-  // });
+  describe("Test login by corect user ", () => {
+    test("It should give status 200", async () => {
+      const response = await request(app).post("/api/auth/signin").send({
+          username: "Niki",
+          password: "12345690"
+      });
+      expect(response.statusCode).toBe(200);
+    }, 30000);
+  });
 
-  // describe("Test loginout ", () => {
-  //   test("It should give status 200", async () => {
-  //     const response = await request(app).post("/api/auth/signout");
-  //     expect(response.statusCode).toBe(200);
-  //   }, 30000);
-  // });
+  describe("Test loginout ", () => {
+    test("It should give status 200", async () => {
+      const response = await request(app).post("/api/auth/signout");
+      expect(response.statusCode).toBe(200);
+    }, 30000);
+  });
 
   afterAll(() => jest.setTimeout(5 * 10000));
