@@ -10,6 +10,12 @@
     margin: auto;
   }
 
+  .dformat{
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 76px;
+  }
+
   h1,
   h2,
   h3,

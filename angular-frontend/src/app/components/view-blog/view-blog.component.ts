@@ -14,6 +14,8 @@ export class ViewBlogComponent implements OnInit {
   currentBlog: Blog = {
     title: '',
     description: '',
+    author: '',
+    updatedAt: '',
     published: false
   };
   

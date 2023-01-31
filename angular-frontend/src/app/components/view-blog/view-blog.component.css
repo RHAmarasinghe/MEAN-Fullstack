@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 .list {
     text-align: left;
     max-width: 750px;
@@ -32,6 +37,7 @@
     justify-content: space-between;
     margin-top: 16px;
     width: 98%;
+    
 
   }
 
@@ -104,15 +110,6 @@
     color: #125699;
   }
 
-  .desrip{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
-           line-clamp: 3; 
-    -webkit-box-orient: vertical;
-  }
-
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
     .card:not(.highlight-card) {
@@ -143,11 +140,18 @@
 
   .together2{
     /* border: 1px solid yellow; */
-    height: 568px;
+    height: 700px;
     background-image: url("https://images.wallpaperscraft.com/image/single/lake_sunset_trees_124674_3840x2400.jpg");
     /* Create a parallax effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Alice', serif;
+  }
+
+  .dformat{
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 76px;
   }

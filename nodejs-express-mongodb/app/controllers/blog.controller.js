@@ -35,8 +35,12 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   const title = req.query.title;
   const author = req.query.author;
+  const updatedAt = req.query.updatedAt;
+  
+
   var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : 
   author ? {author: { $regex: new RegExp(author), $options: "i" }} : {};
+  updatedAt ? {updatedAt: { $regex: new RegExp(updatedAt), $options: "i" }} : {};
 
   Blog.find(condition)
     .then(data => {

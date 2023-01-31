@@ -5,8 +5,9 @@
             <div class="card-img">
                 <img src="https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1042&q=80" style="width:50%;height:200px;">
               </div>
-            <h3>{{ currentBlog.title }}</h3>
-            <h6>by me</h6>
+            <h3><strong>{{ currentBlog.title }}</strong></h3>
+            <h6 class="dformat">{{currentBlog.updatedAt}}</h6>
+            <h6>by <strong>{{currentBlog.author}}</strong></h6>
             <p class="desrip">{{ currentBlog.description }}
                 </p>
         </div> 
