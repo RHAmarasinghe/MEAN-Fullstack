@@ -4,6 +4,7 @@
   "description": "Full Stack project - MEAN",
   "main": "index.js",
   "scripts": {
+    "start": "node app/server.js"
     "test": "jest"
   },
   "author": "Rashmi Amarasinghe",
