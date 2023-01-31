@@ -2,9 +2,9 @@
   "name": "nodejs-express-mongodb",
   "version": "1.0.0",
   "description": "Full Stack project - MEAN",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app/server.js",
+    "start": "node server.js",
     "test": "jest"
   },
   "author": "Rashmi Amarasinghe",
