@@ -12,7 +12,7 @@ beforeAll(() => jest.setTimeout(90 * 1000));
 
   describe("Test get one blog by id", () => {
     test("It should give status 200", async () => {
-      const response = await request(app).get("/api/blogs/63cda4044eed594c1e79571f");
+      const response = await request(app).get("/api/blogs/63d9fc6b60641da6af88ebff");
       expect(response.statusCode).toBe(200);
     }, 30000);
   });
